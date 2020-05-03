@@ -1,6 +1,7 @@
 package com.example.springbootwebsocket;
 
 import com.example.springbootwebsocket.controller.UserController;
+import com.example.springbootwebsocket.model.Name;
 import com.example.springbootwebsocket.model.User;
 import com.example.springbootwebsocket.model.UserResponce;
 import org.junit.Assert;
@@ -14,9 +15,11 @@ public class SpringBootWebsocketApplicationTests {
 	@Test
 	public void UserResponceTest() {
 		UserController userController =  new UserController();
-		UserResponce userResponce = userController.getUser(new User("Sohel"));
+		User user = new User("Sohel");
+		UserResponce userResponce = userController.getUser(user,new Name("Sohel"));
+
 		System.out.println(userResponce.getContent());
-		Assert.assertEquals(userResponce.getContent(),"Sohel");
+		Assert.assertEquals(userResponce.getContent(),"Sohel : Sohel");
 	}
 
 }
