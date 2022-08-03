@@ -15,11 +15,11 @@ public class SpringBootWebsocketApplicationTests {
 	@Test
 	public void UserResponceTest() {
 		UserController userController =  new UserController();
-		User user = new User("Sohel");
-		UserResponce userResponce = userController.getUser(user,new Name("Sohel"));
+		User user = new User("Sohel has joined the chat");
+		UserResponce userResponce = userController.getUser(new Name("Sohel"), user);
 
 		System.out.println(userResponce.getContent());
-		Assert.assertEquals(userResponce.getContent(),"Sohel : Sohel");
+		Assert.assertEquals(userResponce.getContent(),"Sohel has joined the chat");
 	}
 
 }

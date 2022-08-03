@@ -2,6 +2,7 @@ package com.example.springbootwebsocket.model;
 
 public class User {
     private String message;
+
     public User() {
     }
 
