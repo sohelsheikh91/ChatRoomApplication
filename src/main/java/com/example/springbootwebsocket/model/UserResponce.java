@@ -1,6 +1,8 @@
 package com.example.springbootwebsocket.model;
 
 public class UserResponce {
+
+    private String name;
     private String content;
 
     public String getName() {
@@ -11,20 +13,14 @@ public class UserResponce {
         this.name = name;
     }
 
-    private String name;
-
-    public UserResponce() {
-    }
-
-    public UserResponce(String content) {
+    public UserResponce(String name, String content) {
+        this.name = name;
         this.content = content;
-
     }
 
     public String getContent() {
         return content;
     }
-
 
     public void setContent(String content) {
         this.content = content;

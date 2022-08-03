@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WebSocket</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
+</head>
+
+<body>
+<div id="fullpage" class="d-none">
+    <div id="header">
+        <div id="logo">
+            <div id="logo_text">
+                <h1><a href=""><span class="logo_colour">Chat Room App</span></a></h1>
+                <h2>Discussion Forum</h2>
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="container" >
+        <div class="row">
+            <div class="col-md-6" style="margin-top:20px">
+                <form class="form-inline">
+                    <div class="form-group">
+                       <!-- <label class="form-label" >Enter your Name : </label>
+                        <input type="text" style="margin-bottom:10px" id ="name" class="form-control" placeholder="Your name here...">
+-->
+                        <label class="form-label">Disconnect from Chatroom :</label>
+                      <!--  <button id="login" class="btn btn-success" type="submit">Login</button>-->
+                        <button id="disconnect" class="btn btn-danger" type="submit" disabled="disabled">Logout</button><p></p>
+                        <label class="form-label h5" id="welcome">Welcome Message</label><br />
+                        <label class="form-label" for="message">Type your message</label><br />
+                        <input type="text" id="message" class="form-control" style="margin-right: 16px" placeholder="Your message here...">
+                        <button id="send" style="margin-top:10px" class="btn btn-primary" type="submit">Send</button>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <table id="conversation" class="table table-striped">
+                    <thead class = "table-dark">
+                    <tr>
+                        <th>Message Log</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userinfo">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="name-from" class="bg-primary d-flex align-items-center">
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div  class="logo-color col-md-6 offset-md-4">
+                <h3>Welcome to Chat Room</h3>
+                </br>
+            </div>
+            <div class="col-md-4 offset-md-4">
+
+                <div class="input-group">
+
+                    <input type="text"
+                           placeholder="Enter your name"
+                           id="name-value"
+                           autofocus
+                           class="form-control"
+                    >
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" id="connect">Enter</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

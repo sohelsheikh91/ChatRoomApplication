@@ -12,8 +12,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 public class SchedulerConfig {
     @Autowired
     SimpMessagingTemplate template;
-    @Scheduled(fixedDelay = 5000)
-    public void sendAdhocMessages(){
+    //@Scheduled(fixedDelay = 5000)
+//    public void sendAdhocMessages(){
 //        template.convertAndSend("/topic/user", new UserResponce("Scheduler"));
-    }
+//    }
 }
